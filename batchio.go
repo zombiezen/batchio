@@ -130,7 +130,7 @@ func (r *Reader) Finish() ([]byte, error) {
 // A Writer is a buffered io.Writer that writes batches to an underlying
 // [io.Writer] object. If an error occurs writing to a Writer, no more data will
 // be accepted and all subsequent writes, and Flush, will return the error.
-// After all data has been written, the client should call the [Flush] method to
+// After all data has been written, the client should call the [Writer.Flush] method to
 // guarantee all data has been forwarded to the underlying [io.Writer] object.
 type Writer struct {
 	w         io.Writer
